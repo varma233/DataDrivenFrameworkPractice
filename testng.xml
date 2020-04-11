@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Data Driven Framework Test Suite">
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter"></listener>
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter"></listener>
+		<listener class-name="com.naveen.test.listeners.CustomListener"></listener>
+	</listeners>
+	
+	<test thread-count="5" name="Bank Manager Login Test">
+		<classes>
+			<class name="com.naveen.test.testcases.BankManagerLoginTest" />
+		</classes>
+	</test> <!-- Test -->
+	
+	<test thread-count="5" name="Add Customer Test">
+		<classes>
+			<class name="com.naveen.test.testcases.AddCustomersTest" />
+		</classes>
+	</test> <!-- Test -->
+	
+	<test thread-count="5" name="Open Accounts Test">
+		<classes>
+			<class name="com.naveen.test.testcases.OpenAccountsTest" />
+		</classes>
+	</test> <!-- Test -->
+
+
+</suite> <!-- Suite -->

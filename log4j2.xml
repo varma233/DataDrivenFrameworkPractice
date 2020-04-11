@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+<Properties>
+    <Property name="log-path">src\test\resources\logs</Property>
+</Properties>
+<Appenders>
+
+    <!-- console appender -->
+    <Console name="console-log" target="SYSTEM_OUT">
+        <PatternLayout pattern="[%-5level] %d{yyyy-MM-dd HH:mm:ss} [%t] %c{1} - %msg%n"/>
+    </Console>
+
+    <!-- file appender -->
+    <RollingFile name="selenium" fileName="${log-path}\Selenium.log"
+                 filePattern="${log-path}\Selenium-%d{yyyy-MM-dd}.log" append="false">
+        <!-- log pattern -->
+        <PatternLayout>
+            <pattern>%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n</pattern>
+        </PatternLayout>
+
+        <!-- set file size policy -->
+        <Policies>
+            <TimeBasedTriggeringPolicy />
+            <SizeBasedTriggeringPolicy size="5 MB" />
+        </Policies>
+    </RollingFile>
+    
+    <RollingFile name="application" fileName="${log-path}\Application.log"
+                 filePattern="${log-path}\Application-%d{yyyy-MM-dd}.log" append="false">
+        <PatternLayout>
+            <pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss} %c{1} - %msg%n</pattern>
+        </PatternLayout>
+        <Policies>
+            <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+        </Policies>
+    </RollingFile>
+</Appenders>
+
+<Loggers>
+    <Logger name="com.naveen.test" level="trace" additivity="false">
+        <appender-ref ref="application" level="debug" />
+        <appender-ref ref="selenium" level="trace" />
+    </Logger>
+
+    <Root level="info" additivity="false">
+        <AppenderRef ref="console-log"/>
+    </Root>
+</Loggers>
+</Configuration>

@@ -1,0 +1,12 @@
+21:46:56.208 [main] TRACE com.naveen.test.base.TestBase - ******************* TEST EXECUTION - STARTED *******************
+21:46:56.217 [main] TRACE com.naveen.test.base.TestBase - Config.properties file loaded
+21:46:56.217 [main] TRACE com.naveen.test.base.TestBase - OR.properties file loaded
+21:46:56.217 [main] DEBUG com.naveen.test.base.TestBase - browser name=firefox
+21:46:56.219 [main] TRACE com.naveen.test.base.TestBase - Detected FIREFOX browser
+21:47:05.276 [main] TRACE com.naveen.test.base.TestBase - Firefox Driver initialized
+21:47:11.812 [main] DEBUG com.naveen.test.base.TestBase - Launched baseURL : http://www.way2automation.com/angularjs-protractor/banking/#/login
+21:47:11.888 [main] TRACE com.naveen.test.base.TestBase - Executing LoginAsBranchManager test
+21:47:21.923 [main] TRACE com.naveen.test.base.TestBase - Quitting browser
+21:47:23.595 [main] TRACE com.naveen.test.base.TestBase - ******************* TEST EXECUTION - ENDED *******************
+
+
