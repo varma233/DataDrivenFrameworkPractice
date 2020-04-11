@@ -15,12 +15,12 @@ public class TestProperties {
 		Properties config = new Properties();
 		FileInputStream fis = new FileInputStream(rootdirectory+"\\src\\test\\resources\\properties\\config.properties");
 		config.load(fis);		
-		config.forEach((key, value)->System.out.println(key+" ---> "+value));
+	//	config.forEach((key, value)->System.out.println(key+" ---> "+value));
 
 // 		Reading OR.properties file		
 		Properties or = new Properties();
 		or.load(new FileInputStream(rootdirectory+"\\src\\test\\resources\\properties\\OR.properties"));
-		or.forEach((k,v)->System.out.println(k+" == "+v));
+	//	or.forEach((k,v)->System.out.println(k+" == "+v));
 		
 
 		
